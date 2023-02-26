@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<title>Uploads files demo</title>
+
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+	<div id="app" class="app">
+		<div class="container">
+			<section class="app__content">
+				<h1 class="app__caption">Upload files demo</h1>
+				<form class="app__form" action="/files.php" method="POST" enctype="multipart/form-data">
+					<label for="input-file" class="app__file-label">
+						<input type="file" id="input-file" class="app__file-input" name="upload_files[]" multiple required>
+						<span class="app__file-btn">Attach file(s)</span>
+					</label>
+					<div class="app__attachment-files"></div>
+					<button type="submit" name="send" class="app__submit">Upload</button>
+				</form>
+			</section>
+			<pre class="app__result">This response</pre>
+		</div>
+	</div>
+
+	<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

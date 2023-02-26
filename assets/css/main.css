@@ -1,0 +1,226 @@
+/*-------------------- begin reset styles --------------------*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+button {
+	padding: 0;
+	border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1.2;
+	background-color: #fff;
+}
+
+ol {
+	padding-left: 0;
+	list-style: decimal;
+}
+
+ul {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+pre {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*-------------------- end reset styles --------------------*/
+
+
+/*-------------------- begin application styles --------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font: 16px Arial, Helvetica, sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.app {
+	padding-top: 8%;
+	padding-bottom: 8%;
+}
+
+.app .container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+}
+
+.app__caption {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.app__form {
+	margin-top: 40px;
+}
+
+.app__file-label {
+	position: relative;
+}
+
+.app__file-input {
+	font-size: 0;
+	opacity: 0;
+	position: absolute;
+	top: 4px;
+	left: 14px;
+}
+
+.app__file-btn {
+	display: inline-block;
+	padding: 10px 15px 10px 40px;
+	color: #555;
+	background: url('../images/add.svg') no-repeat 10% 50% / 16px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	user-select: none;
+}
+
+.app__file-btn:hover,
+.app__submit:hover,
+.app__file-del:hover {
+	cursor: pointer;
+}
+
+.app__file-input:focus + .app__file-btn,
+.app__file-btn:hover {
+	color: #111;
+	border: 1px solid #111;
+}
+
+.app__attachment-files {
+	font-size: .9rem;
+	padding: 15px 0 30px 10px;
+}
+
+.app__attachment-files p {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.app__attachment-files p:last-child {
+	margin-bottom: 0;
+}
+
+.app__file-del {
+	font-size: 0;
+	background: transparent;
+	width: 10px;
+	height: 10px;
+	margin-top: 3px;
+	margin-left: 5px;
+	background: url('../images/close-gray.svg') no-repeat center;
+}
+
+.app__submit {
+	font-weight: 700;
+	color: #555;
+	margin-top: 15px;
+	padding: 12px 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	background-color: #eee;
+}
+
+.app__submit:focus,
+.app__submit:hover {
+	outline: none;
+	border: 1px solid #777;
+}
+
+.app__file-input:focus + .app__file-btn,
+.app__submit:focus {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.app__content {
+	flex: 0 0 40%;
+}
+
+.app__result {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 400px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin-left: 20%;
+	padding: 30px;
+	word-break: break-all;
+	white-space: break-spaces;
+	overflow-y: auto;
+}
+
+/*-------------------- end application styles --------------------*/
+
+
+/*-------------------- begin responsive styles --------------------*/
+
+@media screen and (max-width: 1199px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.app__result {
+		margin-left: 10%;
+	}
+}
+
+@media screen and (max-width: 959px) {
+	.container {
+		max-width: 540px;
+	}
+
+	.app__content {
+		flex-basis: 100%;
+	}
+
+	.app__result {
+		width: 100%;
+		margin-top: 50px;
+		margin-left: 0;
+	}
+}
+
+/*-------------------- end responsive styles --------------------*/
